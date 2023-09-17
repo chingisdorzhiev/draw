@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="appWindow">
+      <div id="menu">
+        <input class="btn" type="color" id="color" />
+        <input class="btn" type="button" id="size" value="size" />
+        <input class="btn" type="button" id="undo" value="undo" />
+        <input class="btn" type="button" id="redo" value="redo" />
+        <input class="btn" type="button" id="clear" value="clear" />
+      </div>
+      <canvas id="sizeCanv" height="200" width="200" hidden>Error</canvas>
+      <input type="range" id="sizeSlider" min="1" max="100" value="5" hidden />
+      <canvas id="drawing" height="600" width="600">Error</canvas>
+    </div>
+    <script src="drawing.js"></script>
+  </body>
+</html>

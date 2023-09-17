@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#appWindow {
+  position: relative;
+  border: 1px solid #90e0ef;
+}
+
+#menu {
+  padding: 10px;
+  background-color: #90e0ef;
+  border-bottom: 1px solid #90e0ef;
+  user-select: none;
+}
+
+.btn {
+  margin: 2px;
+  border: none;
+  width: 40px;
+  height: 30px;
+  vertical-align: middle;
+  background-color: white;
+  color: #03045e;
+  font-size: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(110%);
+}
+
+.btn:active {
+  filter: brightness(90%);
+}
+
+#sizeCanv {
+  position: absolute;
+  margin: 0 0 2% 0;
+  border: 1px solid #90e0ef;
+  top: 10%;
+  left: 5%;
+}
+
+#sizeSlider {
+  position: absolute;
+  top: 42%;
+  left: 5%;
+  width: 200px;
+}
+
+/* Стилизация слайдера */
+
+/* Сброс дефолтных стилей */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Стилизация дорожки */
+
+/* Chrome, Safari, Opera и Edge Chromium */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #b5e48c;
+  height: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  background-color: #b5e48c;
+  height: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Стилизация ползунка */
+
+/* Chrome, Safari, Opera и Edge Chromium */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Сбрасываем вид по умолчанию */
+  appearance: none;
+  margin-top: -0.25rem; /* Центрируем ползунок на дорожке */
+  background-color: #028090;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+/* Firefox */
+
+input[type="range"]::-moz-range-thumb {
+  border: none; /* Удаляем лишнюю рамку, которую добавляет FF */
+  border-radius: 0; /* Удаляем скругление углов по умолчанию */
+  background-color: #028090;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+/***** Стили фокусировки *****/
+
+/* Удаляем фокус по умолчанию */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* Chrome, Safari, Opera и Edge Chromium */
+/* input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid #05668d;
+  outline-offset: 0.125rem;
+} */
+
+/* Firefox */
+/* input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #05668d;
+  outline-offset: 0.125rem;
+} */
